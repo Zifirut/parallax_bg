@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'package:parallax_bg/parallax_bg.dart';
+import 'package:flip_card/flip_card.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   runApp(MyApp());
 }
 
@@ -14,67 +17,15 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   double _planetOffset = 1;
-  double _meteorOffset = 5;
-
-  bool _loading = false;
+  double _meteorOffset = 4;
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        // appBar: AppBar(
-        //   title: const Text('Sample App'),
-        // ),
         body: Column(mainAxisSize: MainAxisSize.max, children: [
-          Expanded(
-              child: _loading
-                  ? Center(child: CircularProgressIndicator())
-                  : _parallaxBody()),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Text("Planet"),
-                Expanded(
-                  child: Slider(
-                    value: _planetOffset,
-                    onChanged: (val) {
-                      setState(() {
-                        _planetOffset = val;
-                      });
-                    },
-                    min: 1,
-                    max: 10,
-                  ),
-                ),
-                Text(_planetOffset.toStringAsFixed(0)),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Row(
-              children: [
-                Text("Meteor"),
-                Expanded(
-                  child: Slider(
-                    value: _meteorOffset,
-                    onChanged: (val) {
-                      setState(() {
-                        _meteorOffset = val;
-                      });
-                    },
-                    min: 5,
-                    max: 20,
-                  ),
-                ),
-                Text(_meteorOffset.toStringAsFixed(0)),
-              ],
-            ),
-          ),
+          Expanded(child: _parallaxBody()),
         ]),
       ),
     );
@@ -85,13 +36,99 @@ class _MyAppState extends State<MyApp> {
       backgroundImage: "assets/images/galaxy.jpg",
       foregroundChilds: [
         ParallaxItem(
-            child: Image.asset("assets/images/planet.png"),
-            offset: _planetOffset),
+            child: Image.asset("assets/images/galaxy.jpg"),
+            offset: _planetOffset + 6),
         ParallaxItem(
-            child: Image.asset("assets/images/meteor.png"),
-            offset: _meteorOffset),
+            child: Stack(
+              children: [
+                Positioned(
+                  top: 100,
+                  left: 150,
+                  child: Image.asset(
+                    'assets/images/wing.png',
+                    scale: 2,
+                  ),
+                ),
+              ],
+            ),
+            offset: _planetOffset + 4),
+        ParallaxItem(
+            child: Image.asset(
+              "assets/images/kab.png",
+              scale: 0.1,
+              fit: BoxFit.fitHeight,
+            ),
+            offset: _planetOffset + 2),
+        ParallaxItem(
+            child: Stack(
+              children: [
+                Positioned(
+                  left: -30,
+                  bottom: 0,
+                  child: Image.asset(
+                    "assets/images/kab_data.png",
+                    scale: 1,
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+              ],
+            ),
+            offset: _planetOffset + 1),
+        ParallaxItem(
+            child: Stack(
+              children: [
+                Positioned(
+                  bottom: 250,
+                  left: 140,
+                  child: FlipCard(
+                    speed: 200,
+                    flipOnTouch: true,
+                    direction: FlipDirection.VERTICAL,
+                    front: SizedBox(
+                        child: Image.asset(
+                      'assets/images/face.png',
+                      alignment: Alignment.center,
+                      scale: 1.1,
+                    )),
+                    back: SizedBox(
+                        child: Image.asset(
+                      'assets/images/face2.png',
+                      alignment: Alignment.center,
+                      scale: 1.1,
+                    )),
+                  ),
+                ),
+              ],
+            ),
+            offset: _planetOffset + 1.5),
+        ParallaxItem(
+            child: Stack(
+              children: [
+                Positioned(
+                  bottom: 100,
+                  left: 80,
+                  child: FlipCard(
+                    speed: 200,
+                    flipOnTouch: true,
+                    direction: FlipDirection.HORIZONTAL,
+                    front: SizedBox(
+                        child: Image.asset(
+                      'assets/images/phone.png',
+                      alignment: Alignment.center,
+                      scale: 1.1,
+                    )),
+                    back: SizedBox(
+                        child: Image.asset(
+                      'assets/images/mail.png',
+                      alignment: Alignment.center,
+                      scale: 1.1,
+                    )),
+                  ),
+                ),
+              ],
+            ),
+            offset: _planetOffset + 1.5),
       ],
-      // fallback: true,
     );
   }
 }

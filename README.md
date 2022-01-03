@@ -1,5 +1,5 @@
 # id_parallax creative own id card.
-Create beautiful & interactive parallax backgrounds for your apps and games.
+Create beautiful & interactive parallax backgrounds for your apps.
 
 [![pub package](https://img.shields.io/badge/pub-v2.0.0-blue)](https://pub.dev/packages/parallax_bg)  
 

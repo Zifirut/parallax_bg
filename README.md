@@ -1,7 +1,7 @@
 # id_parallax creative own id card.
 Create beautiful & interactive parallax backgrounds for your apps.
 
-[![pub package](https://img.shields.io/badge/pub-v2.0.0-blue)](https://pub.dev/packages/parallax_bg)  
+  
 
 ![Example Image](https://github.com/kumar-aakash86/parallax_bg/blob/master/screenshots/samplffffe.gif)
 
@@ -9,7 +9,7 @@ Create beautiful & interactive parallax backgrounds for your apps.
 
 ## Usage
 Add following command in your **pubspec.yaml** & install package
-
+[![pub package](https://img.shields.io/badge/pub-v2.0.0-blue)](https://pub.dev/packages/parallax_bg)
 `parallax_bg:2.0.0`
     
 

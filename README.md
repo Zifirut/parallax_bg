@@ -3,9 +3,9 @@ Create beautiful & interactive parallax backgrounds for your apps.
 
 [![pub package](https://img.shields.io/badge/pub-v2.0.0-blue)](https://pub.dev/packages/parallax_bg)  
 
-![Example Image](https://github.com/kumar-aakash86/parallax_bg/blob/master/screenshots/sample.gif)
+![Example Image](https://github.com/kumar-aakash86/parallax_bg/blob/master/screenshots/samplffffe.gif)
 
-You can find another working example in [SlideIT Mobile Game](https://play.google.com/store/apps/details?id=ak.fltr.slide_puzzle)
+
 
 ## Usage
 Add following command in your **pubspec.yaml** & install package

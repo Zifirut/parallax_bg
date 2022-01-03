@@ -1,4 +1,4 @@
-# id_parallax creative own id card.
+# parallax_own_id_card, creative own id card.
 Create beautiful & interactive parallax backgrounds for your apps.
 
   

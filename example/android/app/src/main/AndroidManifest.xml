@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ak.fltr.parallax_bg_example">
    <application
-        android:label="parallax_bg_example"
+        android:label="Self ID"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

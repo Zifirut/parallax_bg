@@ -8,6 +8,10 @@ void main() {
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   runApp(MyApp());
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    systemNavigationBarColor: Colors.black,
+    statusBarColor: Colors.transparent,
+  ));
 }
 
 class MyApp extends StatefulWidget {
@@ -17,7 +21,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   double _planetOffset = 1;
-  double _meteorOffset = 4;
+  // double _meteorOffset = 4;
 
   @override
   Widget build(BuildContext context) {

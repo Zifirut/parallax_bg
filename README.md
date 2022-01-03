@@ -9,9 +9,9 @@ Create beautiful & interactive parallax backgrounds for your apps.
 
 ## Usage
 Add following command in your **pubspec.yaml** & install package
-[![pub package](https://img.shields.io/badge/pub-v2.0.0-blue)](https://pub.dev/packages/parallax_bg)
+
 `parallax_bg:2.0.0`
-    
+ [![pub package](https://img.shields.io/badge/pub-v2.0.0-blue)](https://pub.dev/packages/parallax_bg)   
 
 _**Import in your dart page**_
 ```

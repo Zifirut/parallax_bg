@@ -3,7 +3,7 @@ Create beautiful & interactive parallax backgrounds for your apps.
 
   
 
-![Example Image](https://github.com/kumar-aakash86/parallax_bg/blob/master/screenshots/samplffffe.gif)
+![Example Image](https://github.com/Zifirut/parallax_bg/blob/master/demo%20id%20card.gif)
 
 
 
